@@ -45,9 +45,9 @@
 						<!-- Intro -->
 							<article id="intro">
 								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+								<span class="image main"><img src="images/tree.jpg" width="200" height="200" alt="In the trees" /></span>
+								<p>Hello, my name is David Yanofsky. I am a  full stack web developer. I am the perfect developer for your project. By the way, check out my <a href="#work">awesome work</a>.</p>
+								<p>Once in a while it is good to have a web site that you can show your work. This is my web site where I show my portfolio of successful web development projects. Hire me for your next project.</p>
 							</article>
 
 						<!-- Work -->
@@ -55,11 +55,15 @@
 								<h2 class="major">Work</h2>
 								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
 								<p>
-									<a href="https://github.com/dqxy/responsive-web-design-I" target="_blank">Responsive Web Design I project</a> - My excellent responsive web site
+									<a href="https://github.com/dqxy/responsive-web-design-I" target="_blank">Responsive Web Design I project</a> - My responsive web site
 
 									<br><br>
 
-									<a href="https://github.com/dqxy/UI-III-Flexbox" target="_blank">UI-III-Flexbox</a> - My excellent flex box web site
+									<a href="https://github.com/dqxy/UI-III-Flexbox" target="_blank">UI-III-Flexbox</a> - Excellent flex box web creation<br><br>
+
+									<a href="https://github.com/dqxy/Sprint-Challenge--User-Interface" target="_blank">Sprint Challenge</a> - An incredible Sprint Challenge <br><br>
+
+									<a href="https://github.com/dqxy/Git-for-Web-Development-Project" target="_blank">Git Development</a> - A first look
 								</p>
 								
 							</article>
@@ -74,7 +78,7 @@
 									  Your browser does not support the video tag.
 									  </video>
 								</span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<p>This is a cool video of sitting by a fire and pouring a drink. I do this is my spare time all the time. The contact form does not work at the moment as the host only supports static web pages.</p>
 							</article>
 
 						<!-- Contact -->
@@ -300,7 +304,32 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 								<section>
 									<h3 class="major">Form</h3>
-									<form method="post" action="#">
+
+	<!--?php
+     $name = $_POST['name'];
+     $email = $_POST['email'];
+     $subject = $_POST['subject'];
+	 $message = $_POST['message'];  
+	 
+	 $from = 'From: <noreply>';
+     $to = 'yanofsky.david@gmail.com';
+     $email_subject = 'New Contact Form Submission!';
+     
+	 $body = "Name: $name\nE-mail: $email\nSubject: $subject\n\nThe message is below:\n$message";;
+	 
+	 if (isset($_POST['submitbtn']))
+    {
+        if (mail($to, $email_subject, $body, $from))
+        {
+            echo "<font color=\"green\"><p>Your message has been sent!</p></font>";
+        }
+        else
+        {
+        echo "<font color=\"red\"><p>Your message sending has failed! Please manually email (your email)!</p></font>";
+        }
+    }
+	 ?-->									
+									<form method="post" action="index.php">
 										<div class="fields">
 											<div class="field half">
 												<label for="demo-name">Name</label>
@@ -342,7 +371,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 											</div>
 										</div>
 										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="submit" value="Send Message" class="primary" name="submitbtn" /></li>
 											<li><input type="reset" value="Reset" /></li>
 										</ul>
 									</form>
